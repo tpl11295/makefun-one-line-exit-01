@@ -1,9 +1,9 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+// The One-Line Exit — a single-line resignation letter, 1 to 140 characters.
+// It has to read like a letter someone could actually send, with the joke landing in that one line.
+// Fresh angle: the office printer got promoted above the employee.
+import * as fs from "node:fs";
 
-// The One-Line Exit entry — exactly one line: the funniest resignation letter.
-// Judge brief: reads like a letter a person could actually send, and the joke lands in that single line.
-// Chosen line: formal resignation shape, with the coffee machine out-ticketing the employee.
 const LINE =
-  'I hereby resign, effective immediately, because the coffee machine has filed more tickets than I have this quarter.';
-mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", LINE, "utf8");
+  "I hereby resign, because the printer just got promoted to management and I refuse to take orders from a machine that jams under pressure.";
+fs.mkdirSync("/output", { recursive: true });
+fs.writeFileSync("/output/entry.txt", LINE, "utf8");
